@@ -1,0 +1,9 @@
+circle
+x = x0+R*cos(t); y = y0+R*sin(t); z = 0 (task)
+
+ellipse
+x = x0+Rx*cos(t); y = y0+Ry*sin(t); z = 0 (task)
+
+helix
+step = 2*pi*b -> b = step / (2*pi)
+x = x0+R*cos(t); y = x0+R*sin(t); z = z0+b*t = z0+t*step / (2*pi)
