@@ -1,6 +1,7 @@
 Evgeniy Napylov
 
 - g++ (MinGW.org GCC-6.3.0-1) 6.3.0
+- OpenMP
 - Windows x64
 - The binary is in releases
 
