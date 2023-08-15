@@ -102,7 +102,7 @@ int main(int argc, char const *argv[]) {
     #ifdef OMP_VERSION
     auto radius_sum_omp = 0.0;
     start = std::chrono::steady_clock::now();
-    #pragma omp parallel for reduction(+:sum)
+    #pragma omp parallel for reduction(+:radius_sum_omp)
     for (auto i = 0; i < circles.size(); i++) {
         radius_sum_omp += circles[i]->get_radius();
     }
