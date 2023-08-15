@@ -29,7 +29,7 @@ std::vector<Curve3D*> create_curves(int n) {
     std::uniform_int_distribution<int> uni(0, 2);
     std::uniform_real_distribution<double> und(1.0, 10.0);
 
-    for (auto i = 0; i < CURVES_COUNT; i++) {
+    for (auto i = 0; i < n; i++) {
         auto curve_type = uni(rng);
         switch (curve_type) {
         case 0:
@@ -92,7 +92,7 @@ int main(int argc, char const *argv[]) {
     // Compute the total sum of radii of all curves in the second container
     auto start = std::chrono::steady_clock::now();
     auto radius_sum = std::accumulate(circles.begin(), circles.end(), 0.0,
-    [](double acc, Circle* v2){return acc + v2->get_radius();});
+        [](double acc, Circle* v){return acc + v->get_radius();});
     auto end = std::chrono::steady_clock::now();
     std::cout << "\nRadii sum: " << radius_sum << std::endl;
     auto delta = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
