@@ -1,5 +1,5 @@
-CC=g++
-CFLAGS=-o3-fopenmp # -o3
+CC=clang++
+CFLAGS=-o3 -fopenmp # -o3
 SOURCE_DIR=src
 BIN_DIR=bin
 SOURCES=*.cpp
